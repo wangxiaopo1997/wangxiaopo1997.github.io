@@ -82,7 +82,7 @@
 <meta name="description" content="菜鸟一枚，努力变强中。（每天进步一点点）">
 <meta property="og:type" content="website">
 <meta property="og:title" content="王小坡的博客">
-<meta property="og:url" content="https://wangxiaopo1997.github.io/index.html">
+<meta property="og:url" content="https://wangxiaopo1997.github.io/tags/1-asset-path-slug-2-asset-img-slug-title-3-asset-link-slug-title/index.html">
 <meta property="og:site_name" content="王小坡的博客">
 <meta property="og:description" content="菜鸟一枚，努力变强中。（每天进步一点点）">
 <meta property="og:locale" content="default">
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="https://wangxiaopo1997.github.io/">
+  <link rel="canonical" href="https://wangxiaopo1997.github.io/tags/1-asset-path-slug-2-asset-img-slug-title-3-asset-link-slug-title/">
 
 
 
 
 
-  <title>王小坡的博客</title>
+  <title>Tag: -1 {% asset_path slug %} -2 {% asset_img slug [title] %} -3 {% asset_link slug [title] %} | 王小坡的博客</title>
   
 
 
@@ -143,8 +143,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -217,142 +216,51 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-    
+
+  
+  
+  
+  <div class="post-block tag">
+
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>-1 {% asset_path slug %} -2 {% asset_img slug [title] %} -3 {% asset_link slug [title] %}<small>Tag</small>
+        </h1>
+      </div>
+
       
-
-  
-
-  
-  
-  
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wangxiaopo1997.github.io/2019/07/24/Java类初始化过程/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wang Xiaopo">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="王小坡的博客">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/24/Java类初始化过程/" itemprop="url">Java类初始化过程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2019/07/24/Java类初始化过程/" itemprop="url">
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span itemprop="name">Java类初始化过程</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-24T23:45:50+08:00">
-                2019-07-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
+            </a>
         
-          
-            <h1 id="第一篇《java类初始化过程》"><a href="#第一篇《java类初始化过程》" class="headerlink" title="第一篇《java类初始化过程》"></a>第一篇《java类初始化过程》</h1><p>​        最近面试，经常会遇到关于java类初始化过程的笔试题目，一开始各种错误，最近终于花时间把这一块搞清楚了，故做个笔记，有问题的地方还望不吝指出，感谢。欢迎一起探讨哦~</p>
-<p>​        话不多说，先上图。</p>
-<p><img src="/.io//Java%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%96%E8%BF%87%E7%A8%8B%5Cjava%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%96.png" alt="图1"></p>
-<p>你知道输出结果事什么吗？正确答案是：</p>
-<p><img src="/.io//Java%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%96%E8%BF%87%E7%A8%8B%5Cjava%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%962.png" alt="图2"></p>
-<p>是不是和你想的结果不一样呢？那么接下来就用这个案例来分析一下java在类加载的时候经历了哪些过程。</p>
-<h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>首先，static修饰的方法，变量称为静态方法/变量，也成为类方法/类变量，随着类的加载而加载。Son类中的main方法被jvm调用，而且Son 继承了Father，所以Father类中的给静态变量<strong>i</strong>赋值的操作先被执行，接着就是静态代码块被执行（同类顺序从上到下）。然后就是Son类的静态方法与静态代码块被执行，所以先输出的是：5，1，10，6。</p>
-<p>可以试一下，将main方法内语句删除，运行结果如下图：</p>
-<p><img src="/.io//Java%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%96%E8%BF%87%E7%A8%8B%5Cjava%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%963.png" alt="图3"></p>
-<h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p>然后，main方法执行<strong>new Son();</strong>  其实就是调用的Son类的构造器，但是呢，所有类的构造器第一行隐含了一句<strong>super()</strong>; 也就是调用父类的构造器，那么这里就跳转到Father类中了。到这里你可能会想，这时候应该输出Father构造器里面的内容呀，也就是 <strong>3</strong> ，但是为什么结果是 <strong>9</strong> 呢？</p>
-<p>这里需要注意一下，构造函数执行完<strong>super();</strong>之后，它会等其他的操作执行（比如:<strong>int i=a();</strong>…）完再执行本方法内剩下表达式。也就是说，子类调用了父类构造器，父类调用他的父类（Object类构造器），然后执行<strong>int i = a();</strong> …后续操作完毕之后才会执行Father(){}剩下的表达式。</p>
-<p>代码块 {} 与 方法赋值给变量操作按照 从上到下顺序执行，到这里，你可能又会发现，那样的话先执行应该输出方法<strong>a()</strong>里面的内容<strong>4</strong>呀，可是为啥是<strong>9</strong>呢 ? 这里是因为 方法<strong>a()</strong> 的访问修饰符为<strong>public</strong> 且 子类重写了这个方法，所以输出的是子类的 方法<strong>a()</strong>的内容 <strong>9</strong>，你可以尝试把方法<strong>a()</strong> 的访问修饰符改为<strong>private</strong>  看看结果输出如何？然后就是输出代码块{}里面的内容 <strong>2</strong> ，接着执行Father(){}构造函数里面的内容 <strong>3</strong></p>
-<h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>父类执行完毕之后，子类按照同样的顺序，将剩下的表达式执行 最终输出<strong>9 7 8</strong>，结合之前的输出，最终结果就是<strong>5 ，1， 10 ，6 ，9 ，2 ，3 ，9， 7，8</strong>。</p>
-<h2 id="四"><a href="#四" class="headerlink" title="四"></a>四</h2><p>第一篇博客，写的不足之处还望指出，不正确的地方还请执教，感谢！</p>
+      </h2>
 
-          
-        
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-07-24T23:45:50+08:00" content="2019-07-24">
+          07-24
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
       
     </div>
-    
-    
-    
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
   
   
   
-  </article>
-
-
-    
-  </section>
 
   
 
