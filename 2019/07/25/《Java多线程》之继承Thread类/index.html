@@ -86,14 +86,14 @@
 <meta property="og:site_name" content="王小坡的博客">
 <meta property="og:description" content="第二篇：《Java多线程》之继承Thread类一​    曾经上学时候java的多线程一直实我头痛的地方，学了忘，忘了学。 后面找工作，很多公司会问到线程相关的知识，自己也是逼了自己一把，下定决心把这一块搞懂。当然，目前这个阶段自己学的还比较浅，现在就把自己了解的做个笔记。 二常见线程创建有2种方式，本篇文章主要是通过继承Thread类来创建多线程。 先看一下api中 Thread类的构造方法，这">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://wangxiaopo1997.github.io/2019/07/25/%E3%80%8AJava%E5%A4%9A%E7%BA%BF%E7%A8%8B%E3%80%8B%E4%B9%8B%E7%BB%A7%E6%89%BFThread%E7%B1%BB/%E5%A4%9A%E7%BA%BF%E7%A8%8B1.png">
-<meta property="og:image" content="https://wangxiaopo1997.github.io/2019/07/25/%E3%80%8AJava%E5%A4%9A%E7%BA%BF%E7%A8%8B%E3%80%8B%E4%B9%8B%E7%BB%A7%E6%89%BFThread%E7%B1%BB/%E5%A4%9A%E7%BA%BF%E7%A8%8B2.png">
-<meta property="og:image" content="https://wangxiaopo1997.github.io/2019/07/25/%E3%80%8AJava%E5%A4%9A%E7%BA%BF%E7%A8%8B%E3%80%8B%E4%B9%8B%E7%BB%A7%E6%89%BFThread%E7%B1%BB/%E5%A4%9A%E7%BA%BF%E7%A8%8B3.png">
-<meta property="og:updated_time" content="2019-07-25T07:37:18.377Z">
+<meta property="og:image" content="https://wangxiaopo1997.github.io/2019/07/25/%E3%80%8AJava%E5%A4%9A%E7%BA%BF%E7%A8%8B%E3%80%8B%E4%B9%8B%E7%BB%A7%E6%89%BFThread%E7%B1%BB/%E5%A4%9A%E7%BA%BF%E7%A8%8B1.PNG">
+<meta property="og:image" content="https://wangxiaopo1997.github.io/2019/07/25/%E3%80%8AJava%E5%A4%9A%E7%BA%BF%E7%A8%8B%E3%80%8B%E4%B9%8B%E7%BB%A7%E6%89%BFThread%E7%B1%BB/%E5%A4%9A%E7%BA%BF%E7%A8%8B2.PNG">
+<meta property="og:image" content="https://wangxiaopo1997.github.io/2019/07/25/%E3%80%8AJava%E5%A4%9A%E7%BA%BF%E7%A8%8B%E3%80%8B%E4%B9%8B%E7%BB%A7%E6%89%BFThread%E7%B1%BB/%E5%A4%9A%E7%BA%BF%E7%A8%8B3.PNG">
+<meta property="og:updated_time" content="2019-07-25T07:45:05.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Java多线程》之继承Thread类">
 <meta name="twitter:description" content="第二篇：《Java多线程》之继承Thread类一​    曾经上学时候java的多线程一直实我头痛的地方，学了忘，忘了学。 后面找工作，很多公司会问到线程相关的知识，自己也是逼了自己一把，下定决心把这一块搞懂。当然，目前这个阶段自己学的还比较浅，现在就把自己了解的做个笔记。 二常见线程创建有2种方式，本篇文章主要是通过继承Thread类来创建多线程。 先看一下api中 Thread类的构造方法，这">
-<meta name="twitter:image" content="https://wangxiaopo1997.github.io/2019/07/25/%E3%80%8AJava%E5%A4%9A%E7%BA%BF%E7%A8%8B%E3%80%8B%E4%B9%8B%E7%BB%A7%E6%89%BFThread%E7%B1%BB/%E5%A4%9A%E7%BA%BF%E7%A8%8B1.png">
+<meta name="twitter:image" content="https://wangxiaopo1997.github.io/2019/07/25/%E3%80%8AJava%E5%A4%9A%E7%BA%BF%E7%A8%8B%E3%80%8B%E4%B9%8B%E7%BB%A7%E6%89%BFThread%E7%B1%BB/%E5%A4%9A%E7%BA%BF%E7%A8%8B1.PNG">
 
 
 
@@ -307,12 +307,12 @@
 <p>后面找工作，很多公司会问到线程相关的知识，自己也是逼了自己一把，下定决心把这一块搞懂。当然，目前这个阶段自己学的还比较浅，现在就把自己了解的做个笔记。</p>
 <h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p>常见线程创建有2种方式，本篇文章主要是通过继承Thread类来创建多线程。</p>
 <p>先看一下<strong>api</strong>中 <strong>Thread</strong>类的构造方法，这里我们使用第二个构造方法即可<strong>Thread(Runnable target)</strong></p>
-<p><img src="https://wangxiaopo1997.github.io/2019/07/25/%E3%80%8AJava%E5%A4%9A%E7%BA%BF%E7%A8%8B%E3%80%8B%E4%B9%8B%E7%BB%A7%E6%89%BFThread%E7%B1%BB/%E5%A4%9A%E7%BA%BF%E7%A8%8B1.png" alt="图1"></p>
+<p><img src="https://wangxiaopo1997.github.io/2019/07/25/%E3%80%8AJava%E5%A4%9A%E7%BA%BF%E7%A8%8B%E3%80%8B%E4%B9%8B%E7%BB%A7%E6%89%BFThread%E7%B1%BB/%E5%A4%9A%E7%BA%BF%E7%A8%8B1.PNG" alt="图1"></p>
 <p>首先我们需要创建一个类去实现Thread类，然后重写它的<strong>run();</strong>方法，如下图：</p>
-<p><img src="https://wangxiaopo1997.github.io/2019/07/25/%E3%80%8AJava%E5%A4%9A%E7%BA%BF%E7%A8%8B%E3%80%8B%E4%B9%8B%E7%BB%A7%E6%89%BFThread%E7%B1%BB/%E5%A4%9A%E7%BA%BF%E7%A8%8B2.png" alt="图2"></p>
+<p><img src="https://wangxiaopo1997.github.io/2019/07/25/%E3%80%8AJava%E5%A4%9A%E7%BA%BF%E7%A8%8B%E3%80%8B%E4%B9%8B%E7%BB%A7%E6%89%BFThread%E7%B1%BB/%E5%A4%9A%E7%BA%BF%E7%A8%8B2.PNG" alt="图2"></p>
 <p>然后 在main方法中创建已继承Thread类 的类 的对象，这里是ThreadDemo类，</p>
 <p>然后将类的引用传入Thread类的构造函数，最后调用Thread类对象的<strong>start();</strong>方法，注意调用这个方法，线程会自动调用<strong>run</strong>();方法，如果在这里直接调用<strong>run</strong>();方法，那么它就只是一个普通的方法 ，无法多线程去执行。</p>
-<p><img src="https://wangxiaopo1997.github.io/2019/07/25/%E3%80%8AJava%E5%A4%9A%E7%BA%BF%E7%A8%8B%E3%80%8B%E4%B9%8B%E7%BB%A7%E6%89%BFThread%E7%B1%BB/%E5%A4%9A%E7%BA%BF%E7%A8%8B3.png" alt="图3"></p>
+<p><img src="https://wangxiaopo1997.github.io/2019/07/25/%E3%80%8AJava%E5%A4%9A%E7%BA%BF%E7%A8%8B%E3%80%8B%E4%B9%8B%E7%BB%A7%E6%89%BFThread%E7%B1%BB/%E5%A4%9A%E7%BA%BF%E7%A8%8B3.PNG" alt="图3"></p>
 <p>从图可以看出，两个线程都去执行了run()方法里面的内容，而且有的数字还被打印了两次，这不足为奇。</p>
 <h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>本片到此结束！谢谢阅读！</p>
 <p># </p>
