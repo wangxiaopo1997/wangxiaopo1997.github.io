@@ -232,6 +232,284 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wangxiaopo1997.github.io/2019/09/20/初识位运算符/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wang Xiaopo">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="王小坡的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/20/初识位运算符/" itemprop="url">初识位运算符</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-20T23:34:25+08:00">
+                2019-09-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>不知不觉中在新公司工作了半个月了，因为公司项目使用到的技术很多（Android和web），加上这段时间自己学习也挺认真，所以感觉收获还是挺大的。由于自己在上学时候没有太注意基础的学习，导致项目里用到的很多工具类不是很理解，所以趁周五晚上抓紧学学，此篇博客用作学习笔记，不正确的地方还请指点。</p>
+<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>根据标题可知，本文用来初识位运算符。首先百度百科的简介：</p>
+<p><img src alt>,那么我们就来逐步认识这几个运算符吧~</p>
+<h2 id="第一个：与-“-amp-”"><a href="#第一个：与-“-amp-”" class="headerlink" title="第一个：与 “&amp;”"></a>第一个：与 “&amp;”</h2><p>这个运算符表示两个数 与（例如：a&amp;b，b&amp;c），仅当两个数都为1时候，结果为1，否则为0。</p>
+<p>示例：2&amp;3  –&gt; 转换成二进制</p>
+<p> 0010</p>
+<p> 0011</p>
+<hr>
+<p> 0010</p>
+<p>结果还是2。</p>
+<p>可以使用IDEA输出一下数据：</p>
+<p><img src alt></p>
+<h2 id="第二个：或“-”"><a href="#第二个：或“-”" class="headerlink" title="第二个：或“|”"></a>第二个：或“|”</h2><p>这个运算符表示两个数 或（例如：a|b，b|c），两个数其中有一个为1时候，结果为1，否则为0。</p>
+<p>示例：2|3    –&gt;转成二进制</p>
+<p> 0010</p>
+<p> 0011</p>
+<hr>
+<p> 0011</p>
+<p>结果为3.</p>
+<p>可以使用IDEA输出一下数据：</p>
+<p><img src alt></p>
+<h2 id="第三个：非“-”"><a href="#第三个：非“-”" class="headerlink" title="第三个：非“~”"></a>第三个：非“~”</h2><p>这个运算符表示一个数 非 （例如：~3）表示取反，具体看例子就明白了：</p>
+<p> 0011</p>
+<hr>
+<p> 1100</p>
+<p>结果是-4。1100最高位是有符号的1，表示负数（这里需要一些反码知识），后面不变100转换成十进制是4，所以结果就是-4。</p>
+<p>IDEA输出结果：</p>
+<p><img src alt></p>
+<h2 id="第四个：异或“-”"><a href="#第四个：异或“-”" class="headerlink" title="第四个：异或“^”"></a>第四个：异或“^”</h2><p>这个运算符表示两个数 异或（例如：a^b，b^c），意思就是同为假，异为真，具体看例子：</p>
+<p>示例：2^3</p>
+<p>0010</p>
+<p>0011</p>
+<hr>
+<p>0001</p>
+<p>结果为1，</p>
+<p>IDEA输出结果：</p>
+<p><img src alt>。</p>
+<h2 id="to-be-continue…"><a href="#to-be-continue…" class="headerlink" title="to be continue…"></a>to be continue…</h2><p>有些困了，改天再写~</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wangxiaopo1997.github.io/2019/08/06/《Java多线程》之实现Runnable接口/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wang Xiaopo">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="王小坡的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/06/《Java多线程》之实现Runnable接口/" itemprop="url">《Java多线程》之实现Runnable接口</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-06T22:14:26+08:00">
+                2019-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="第三篇：多线程之实现Runnable接口"><a href="#第三篇：多线程之实现Runnable接口" class="headerlink" title="第三篇：多线程之实现Runnable接口"></a>第三篇：多线程之实现Runnable接口</h1><h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>上篇提到java可以继承Thread类来开启多线程，除此之外还可以实现Runnable接口来开启多线程。首先查看api，<img src alt="api">，Runnable接口里面有个<strong>run</strong>()方法，实现这个接口的时候需要重写<strong>run()</strong>方法。</p>
+<h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p>接下来就来演示一下</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://wangxiaopo1997.github.io/2019/07/27/一些感想/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -308,6 +586,10 @@
 <p>​    从自己面试的三家公司来看，两家需要有一定的前端(JavaScript)开发经验，而我，这方面的知识仅仅停留在上课时候学的那些，实习的公司前端没有用到这些。有时候自己就像花点时间去学学，但是一时不知从哪里入手，渐渐地也就淡了。除了前端技术，数据库也是非常重要，这三家的笔试题基本都是Java基础与数据库各半，这一点也是我的弱项，自己也尝试去学习，但是总感觉收获甚微。哎~</p>
 <p>​    暂时就写到这里，累了，感觉有些上火，明天还有一家面试，祝自己成功~</p>
 <p>​                                                                                                    2019/07/27  2:00 am</p>
+<p>================分=================线=================割===============</p>
+<p>​        转眼又是半月，还是没有找到工作，迷茫中。前天面试了一家公司，自己感觉全程挺顺利，但是结果如何还需等待，哎，应届生想找个工作怎么这么难。现在极度后悔当初的意气用事裸辞工作，就当是一个教训吧，以后绝对不会犯这样错误。 </p>
+<p>​        每次写之前都有很多话想说，但是真正写的时候不知道该怎么表达，就这样吧。</p>
+<p>​                                                                                                        2019/08/11   21:11 pm</p>
 
           
         
@@ -654,7 +936,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
